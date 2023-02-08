@@ -1,0 +1,10 @@
+to change atm card pin
+s1:insert the card
+s2:select the change pin option in the menu
+s3:enter your existing pin
+s4:if pin is invalid repeat step3
+s5:after that enter the new pin
+s6:otp will be sent your number registered at the bank 
+s7:enter the otp 
+s8:new pin will be generated and a message regarding this will be sent to your number
+s9:exit

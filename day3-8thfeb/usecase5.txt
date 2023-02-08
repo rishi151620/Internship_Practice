@@ -1,0 +1,9 @@
+edit book
+s1:get book id to be edited from the user 
+s2:get a new data from the user 
+s3:overwrite the old data with a new one 
+s4:if data in invalid 
+    go to step 7
+s5:editing the book store the book in the respective shelf
+s6:place the book in the order 
+s7:stop

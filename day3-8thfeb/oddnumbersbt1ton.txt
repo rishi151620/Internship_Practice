@@ -1,0 +1,9 @@
+to find the odd no. between 1 to n
+step1:start
+step2:declare i,n
+step3:read n
+step4:intialize the i value i=1
+step5:check i value with n if(i<=n) if true go to step 6 if the condition false go to step 7
+step6:if i%2 != 0:
+          print i
+step7:stop

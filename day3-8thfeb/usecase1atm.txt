@@ -1,0 +1,10 @@
+to withdraw cash from 
+s1:insert the atm card
+s2:select the language 
+s3:select type of transaction click on withdraw option
+s4:enter the pin
+s5:select the type of account
+s6:enter the required amount 
+s7:if the pin is invalid or account has no sufficient balance go to step9
+s8:collect the cash and print the receipt
+s9:exit 

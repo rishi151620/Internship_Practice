@@ -1,0 +1,7 @@
+swao numbers with variable temp
+step1:start
+step2:declare a=10,b=20,temp
+step3:read a,b,temp
+step4:temp=a; a=b;b=temp
+step5:display a , b
+step6:stop

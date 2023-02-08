@@ -1,0 +1,9 @@
+issue book
+s1:start 
+s2:ask the user about the student id and give the libray form
+s3:ask him to find the book and fill in the respective details aboout the book
+s4:get the book id from user 
+s5:note down the date of issuing the book
+s6:issue the book to the user with the last date stamped on the last page of book
+s7:if the book is not available go to s8
+s8:stop

@@ -1,0 +1,11 @@
+to check the balance
+s1:insert the atm card
+s2:select the language 
+s3:select type of transaction and click on balance enquiry
+s4:enter the pin
+s5:select the type of account and click on saving account
+s6:note the balance
+s7:if the pin is invalid go to step9
+s8:print and collect  the receipt if you want 
+s9:remove the card 
+s10:exit

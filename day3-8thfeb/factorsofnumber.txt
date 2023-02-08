@@ -1,0 +1,10 @@
+step1:start
+step2:declare i , n,fact
+step3:read n
+step4:intialize the i value i=1
+step5:check i value with n if(i<=n/2) if true go to step 6 if the condition false go to step8 
+step6:if n%i==0:
+         fact=i
+         display fact
+step7:incremnt i and go to step5
+step8:stop

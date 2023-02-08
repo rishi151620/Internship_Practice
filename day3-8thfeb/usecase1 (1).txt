@@ -1,0 +1,10 @@
+read the book(offline)
+s1:start
+s2:go to the library
+s3:fill your name and the entering time and handover your id 
+s4:select the desired book
+s5:complete the task(read the desired book)
+s6:if the book is not availbe go to step8
+s6:place the book in the respective place 
+s7:fill in the leaving time and collect your id 
+s8:stop

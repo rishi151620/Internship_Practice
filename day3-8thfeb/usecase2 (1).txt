@@ -1,0 +1,10 @@
+search for books(offine)
+s1:start
+s2:go to the library
+s3:fill your name and the entering time and handover your id
+s4:ask the librarian about the desire book
+s5:search for the book using the assigned number(bookNo)
+s6:if the book is not available go to step8
+s7:check the book if its correct or not 
+s8:fill in the leaving time and collect your id 
+s9:stop
