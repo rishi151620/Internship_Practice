@@ -1,0 +1,9 @@
+ find wether number is divisble by 5
+s1:start
+s2:declare n
+s3:read n
+s4:if n%5 == 0
+   divisible by 5
+  else
+   not divisible
+s5:stop

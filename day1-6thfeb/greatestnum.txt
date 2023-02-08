@@ -1,0 +1,10 @@
+step1:start
+step2:declare a b c
+step3:read a b c
+step4: if a>b and a>c:
+          display a greater
+       else if b>a and b>c:
+           display b greater 
+       else:
+            display c greater
+step5:stop

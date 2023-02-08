@@ -1,0 +1,7 @@
+find perimeter of triangle
+s1: start
+s2: declare a,b,c,p
+s3: read a,b,c
+s4: p=a + b+ c
+s5:display p
+s6:stop

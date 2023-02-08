@@ -1,0 +1,7 @@
+find the simple interest
+step1:start
+step2:declare pricipal amount,rate and time
+step3:read principal amount and time
+step4:simple interest=(amount*rate*time)/100
+step5:display simple interest
+step6:stop

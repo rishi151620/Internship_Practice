@@ -1,0 +1,7 @@
+find perimeter of square
+step1:start
+step2:side,perimeter
+step3:read side
+step4:perimeter=4*side
+step5:display perimeter
+step6:stop

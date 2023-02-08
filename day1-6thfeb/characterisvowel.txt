@@ -1,0 +1,8 @@
+step1:start
+step2:declare ch
+step3:read ch
+step4: if ch=='a' or ch=='u' or ch=='i' or ch=='e' or ch=='o':
+             display vowel
+        else : 
+              display consonent
+step5:stop

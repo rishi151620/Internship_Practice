@@ -1,0 +1,9 @@
+to find the no. is even or odd
+step1:start
+step2:declare num 
+step3: read num
+step4:if num%2==0:
+          display even
+       else:
+          display odd
+step5:stop

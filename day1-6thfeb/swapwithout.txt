@@ -1,0 +1,9 @@
+to swap numbers without temp variable
+step1:start
+step2:declare a=10, b=20
+step3:read a , b
+step4:a=a+b
+step5:b=a-b
+step6:a=a-b
+step7:display a b
+step8:stop
