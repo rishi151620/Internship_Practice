@@ -1,0 +1,15 @@
+order management
+s1:start
+s2:go to the customer or guide to the respective table 
+s3:provide them with a restaurent menu
+s4:brief them about the variety of dishes
+s5:take the order and deliver it to the kitchen 
+s6:after the food is ready servethem with a proper care
+s7:wait for some time until the customer finishes their meal
+s8:provide them with a bill and ask for the mode of payment 
+s9:if online payment :
+            provide QR code 
+    else:
+        collect the cash 
+s10:convey gratitude 
+s11:stop

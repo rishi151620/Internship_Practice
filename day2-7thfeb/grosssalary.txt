@@ -1,0 +1,24 @@
+To calculate gross  salary
+s1:start
+s2:declare basic_salary
+s3:read basic_salary
+s4:
+  if basic_salary<=10000
+   hra  = basic_salary*0.2
+   da    = basic _salary*0.8
+    display hra,da
+   g_salary = basic_salary+hra+da
+    display g_salary
+ else if basic_salary<=20000
+   hra  = basic_salary*0.2
+   da    = basic _salary*0.9
+    display hra,da
+   g_salary = basic_salary+hra+da
+    display g_salary
+else if basic_salary>20000
+   hra  = basic_salary*0.95
+   da    = basic _salary*0.3
+    display hra,da
+   g_salary = basic_salary+hra+da
+    display g_salary
+s5:stop

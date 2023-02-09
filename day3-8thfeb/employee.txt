@@ -1,0 +1,12 @@
+employee management 
+s1:start
+s2:select the employee based on their skills
+s3:categorize them to different department according to their skills
+s4:departments include reception,kitchen,service
+s5:if employee is waiter
+        he has to provide the food to customers and the bill
+   else if a receptionalist:
+        to identify and create a bill of the order 
+   else:
+        chef to prepare the respective food requested by the customer 
+s6:stop

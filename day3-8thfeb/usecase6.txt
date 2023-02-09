@@ -1,0 +1,10 @@
+collecting the issued book
+s1:start
+s2:ask the student for the book
+s3:check the book id and return the library card of the student 
+s4:if book is damaged :
+          charge the user as per the damage 
+    else:
+          go to step3
+s5:after collecting,arrange the book
+s6:stop

@@ -1,0 +1,13 @@
+kitchen management
+s1:start
+s2:after taking the order from the customer
+s3:deliver it to the kitchen 
+s4:order will be categorized based on the type
+s5:order will be assigned to the respective chefs 
+s6:make sure the order is completed on time and provided to the customer with utmost care 
+s7:inform the waiter about the completion of order
+s8:if the order is unavailable:
+       inform the waiter 
+  else:
+       go to step4
+s9:stop

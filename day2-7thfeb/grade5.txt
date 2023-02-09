@@ -1,0 +1,18 @@
+average,percentage and grade of 5 subjets
+s1:start
+s2:declare 5 subjects(a,b,c,d,e)
+s3:read 5 subjects(a,b,c,d,e)
+s4:average = (a+b+c+d+e)/5
+  perentage = a+b+c+d+e/max *100
+          if grade>=90 and grade<100
+             display grade A
+        else if grade>=80 and grade<90
+          display grade B
+         else if grade>=70 and grade<80
+          display grade c
+         else if grade>=60 and grade<70
+          display grade d
+         else
+         display fail
+s5:display percentage,average
+s6:stop
