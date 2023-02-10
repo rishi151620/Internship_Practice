@@ -1,0 +1,10 @@
+BEGIN
+       DECLARE i , n,sum
+       READ n
+       INITIALIZE sum=0,i=1
+       WHILE(i<=n/2) DO
+           IF n%i==0:THEN
+              sum=sum+i
+           END IF
+       END WHILE
+END

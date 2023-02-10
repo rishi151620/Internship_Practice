@@ -1,0 +1,12 @@
+BEGIN
+     DECLARE i , n,fact
+     READ n
+     INITIALIZE i=1
+     WHILE(i<=n/2) DO
+          IF n%i==0: THEN
+          fact=i
+          END IF
+          i=i+1
+     END WHILE
+     DISPLAY fact
+END

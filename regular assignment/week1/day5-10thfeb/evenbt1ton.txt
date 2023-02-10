@@ -1,0 +1,11 @@
+to find the even no. between 1 to n
+BEGIN
+    DECLARE i,n
+    READ n
+    INITIALIZE i=1
+    WHILE(i<=n) DO
+          IF i%2==0:
+          print i
+          END IF
+    END WHILE
+END

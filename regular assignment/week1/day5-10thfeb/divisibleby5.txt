@@ -1,0 +1,10 @@
+ find wether number is divisble by 5
+BEGIN
+      DECLARE n
+      READ n
+      IF n%5 == 0 THEN
+          DISPLAY divisible by 5
+      ELSE
+          DISPLAY divisible by 5
+      END IF
+END

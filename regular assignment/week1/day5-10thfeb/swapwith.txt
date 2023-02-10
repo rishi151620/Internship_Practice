@@ -1,0 +1,7 @@
+swao numbers with variable temp
+BEGIN
+      DECLARE a=10,b=20,temp
+      READ a,b,temp
+      CALCULATE temp=a; a=b;b=temp
+      DISPLAY a , b
+END

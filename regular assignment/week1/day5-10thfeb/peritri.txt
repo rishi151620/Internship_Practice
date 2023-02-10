@@ -1,0 +1,6 @@
+BEGIN
+      DECLARE a,b,c,p
+      READ a,b,c
+      CALCULATE  p=a + b+ c
+      DISPLAY p
+END

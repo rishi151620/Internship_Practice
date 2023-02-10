@@ -1,0 +1,9 @@
+BEGIN
+     DECLARE num 
+     READ num
+     IF num%2==0: THEN
+         DISPLAY even
+       ELSE:
+          DISPLAY odd
+      END IF
+END

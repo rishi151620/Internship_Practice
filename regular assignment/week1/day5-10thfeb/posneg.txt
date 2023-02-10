@@ -1,0 +1,11 @@
+to find if the num is positive or negative or zero
+BEGIN
+      DECLARE num
+      READ  num
+      IF num>0  THEN
+             DISPLAY positive 
+      ELSE IF num<0 THEN
+           DISPLAY negative
+      ELSE
+           DISPLAY zero
+END

@@ -1,0 +1,13 @@
+to find the  sum of odd no. between 1 to n
+BEGIN
+        DECLARE i,n,sum
+        READn,sum
+        INITIALIZE sum=0,i=1
+        WHILE(i<=n) DO
+               IF i%2 != 0 THEN
+                   DISPLAY i
+                   sum=sum+i
+               END IF
+               i=i+1
+        END WHILE
+END

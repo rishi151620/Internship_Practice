@@ -1,0 +1,7 @@
+find perimeter of square
+BEGIN
+      DECLARE side,perimeter
+      READ side
+      CALCULATE perimeter=4*side
+      DISPLAY perimeter
+END

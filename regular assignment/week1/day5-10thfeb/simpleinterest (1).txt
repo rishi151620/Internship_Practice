@@ -1,0 +1,7 @@
+find the simple interest
+BEGIN
+      DECLARE pricipal amount,rate and time
+      READ principal amount and time
+      CALCULATE simple interest=(amount*rate*time)/100
+      DISPLAY simple interest
+END

@@ -1,0 +1,7 @@
+find perimeter of rectangle
+BEGIN
+      DECLARE length,breadth,perimeter;
+      READ lenght,breadth;
+      CALCULATE perimeter=2(length+breadth);
+      DISPLAY perimeter;
+END

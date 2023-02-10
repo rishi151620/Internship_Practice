@@ -1,0 +1,9 @@
+to swap numbers without temp variable
+BEGIN
+      DECLARE a=10, b=20
+      READ a,b
+      CALCULATE a=a+b
+      CALCULATE b=a-b
+      CALCULATE a=a-b
+      DISPLAY a,b
+END
