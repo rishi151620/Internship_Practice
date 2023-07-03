@@ -1,0 +1,164 @@
+Create a table named "sales" with the following columns:
+id: An auto-incrementing integer representing the unique identifier for each sales transaction. This column should be the primary key.
+product_name: A string column representing the name of the product sold.
+quantity: An integer column representing the quantity of the product sold.
+unit_price: A decimal column representing the price of one unit of the product.
+total_price: A decimal column representing the total price of the sales transaction (calculated as quantity * unit_price).
+customer_name: A string column representing the name of the customer who made the purchase.
+sale_date: A date column representing the date of the sales transaction.
+Insert data into the table:
+
+ 
+
+Insert at least five sales transactions into the "sales" table, each with different product names, quantities, unit prices, customer names, and sale dates.
+Retrieve data from the table:
+
+ 
+
+Write SQL queries to retrieve the following information:
+Retrieve all sales transactions made by a specific customer (e.g., customer_name = 'John Smith')
+Retrieve sales transactions made by a specific customer (e.g., customer_name = 'John Smith') and a specific product (e.g., product_name = 'Widget'):
+Retrieve sales transactions made by either a specific customer (e.g., customer_name = 'John Smith') or a specific product (e.g., product_name = 'Widget')
+Retrieve sales transactions with a quantity greater than 10 and a total price less than 100:
+Retrieve sales transactions made on a specific date (e.g., sale_date = '2023-06-30') and with a total price greater than or equal to 500:
+
+
+
+
+
+mysql> create database products;
+Query OK, 1 row affected (0.00 sec)
+mysql> use products;
+Database changed
+
+mysql> create table sales(id int primary key,product_name varchar(20),unit_price decimal(10,2),total_price decimal(10,2),customer_name varchar(20),sale_date date);
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> alter table sales modify column id int auto_increment;
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc sales;
++---------------+---------------+------+-----+---------+----------------+
+| Field         | Type          | Null | Key | Default | Extra          |
++---------------+---------------+------+-----+---------+----------------+
+| id            | int(11)       | NO   | PRI | NULL    | auto_increment |
+| product_name  | varchar(20)   | YES  |     | NULL    |                |
+| unit_price    | decimal(10,2) | YES  |     | NULL    |                |
+| total_price   | decimal(10,2) | YES  |     | NULL    |                |
+| customer_name | varchar(20)   | YES  |     | NULL    |                |
+| sale_date     | date          | YES  |     | NULL    |                |
++---------------+---------------+------+-----+---------+----------------+
+6 rows in set (0.03 sec)
+
+mysql> alter table sales add column quantity int;
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> insert into sales(product_name,quantity,unit_price,total_price,customer_name,sale_date) values("nestle",5,50,250,"sanju",'2023-07-03'),("budweiser",6,60,360,"rohit",'2023-07-05'),("oldmonk",9,50,450,"jonas",'2023-06-23'),("milkybar",5,15,75,"sanjana",'2023-07-25'),("oats",5,75,375,"miles",'2023-05-13');
+Query OK, 5 rows affected (0.04 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> select * from sales;
++----+--------------+------------+-------------+---------------+------------+----------+
+| id | product_name | unit_price | total_price | customer_name | sale_date  | quantity |
++----+--------------+------------+-------------+---------------+------------+----------+
+|  1 | nestle       |      50.00 |      250.00 | sanju         | 2023-07-03 |        5 |
+|  2 | budweiser    |      60.00 |      360.00 | rohit         | 2023-07-05 |        6 |
+|  3 | oldmonk      |      50.00 |      450.00 | jonas         | 2023-06-23 |        9 |
+|  4 | milkybar     |      15.00 |       75.00 | sanjana       | 2023-07-25 |        5 |
+|  5 | oats         |      75.00 |      375.00 | miles         | 2023-05-13 |        5 |
++----+--------------+------------+-------------+---------------+------------+----------+
+5 rows in set (0.04 sec)
+
+mysql> select * from sales where customer_name = 'sanjana';
++----+--------------+------------+-------------+---------------+------------+----------+
+| id | product_name | unit_price | total_price | customer_name | sale_date  | quantity |
++----+--------------+------------+-------------+---------------+------------+----------+
+|  4 | milkybar     |      15.00 |       75.00 | sanjana       | 2023-07-25 |        5 |
++----+--------------+------------+-------------+---------------+------------+----------+
+1 row in set (0.01 sec)
+
+mysql> select * from sales where product_name = 'oldmonk';
++----+--------------+------------+-------------+---------------+------------+----------+
+| id | product_name | unit_price | total_price | customer_name | sale_date  | quantity |
++----+--------------+------------+-------------+---------------+------------+----------+
+|  3 | oldmonk      |      50.00 |      450.00 | jonas         | 2023-06-23 |        9 |
++----+--------------+------------+-------------+---------------+------------+----------+
+1 row in set (0.00 sec)
+
+mysql> select * from sales where product_name = 'milkybar' or customer_name='sanju';
++----+--------------+------------+-------------+---------------+------------+----------+
+| id | product_name | unit_price | total_price | customer_name | sale_date  | quantity |
++----+--------------+------------+-------------+---------------+------------+----------+
+|  1 | nestle       |      50.00 |      250.00 | sanju         | 2023-07-03 |        5 |
+|  4 | milkybar     |      15.00 |       75.00 | sanjana       | 2023-07-25 |        5 |
++----+--------------+------------+-------------+---------------+------------+----------+
+2 rows in set (0.00 sec)
+
+mysql> select * from sales where product_name = 'milkybar' AND customer_name='sanju';
+Empty set (0.00 sec)
+
+mysql> select * from sales where product_name = 'milkybar' AND customer_name='sanjana';
++----+--------------+------------+-------------+---------------+------------+----------+
+| id | product_name | unit_price | total_price | customer_name | sale_date  | quantity |
++----+--------------+------------+-------------+---------------+------------+----------+
+|  4 | milkybar     |      15.00 |       75.00 | sanjana       | 2023-07-25 |        5 |
++----+--------------+------------+-------------+---------------+------------+----------+
+1 row in set (0.00 sec)
+
+mysql> select * from sales where not product_name = 'milkybar';
++----+--------------+------------+-------------+---------------+------------+----------+
+| id | product_name | unit_price | total_price | customer_name | sale_date  | quantity |
++----+--------------+------------+-------------+---------------+------------+----------+
+|  1 | nestle       |      50.00 |      250.00 | sanju         | 2023-07-03 |        5 |
+|  2 | budweiser    |      60.00 |      360.00 | rohit         | 2023-07-05 |        6 |
+|  3 | oldmonk      |      50.00 |      450.00 | jonas         | 2023-06-23 |        9 |
+|  5 | oats         |      75.00 |      375.00 | miles         | 2023-05-13 |        5 |
++----+--------------+------------+-------------+---------------+------------+----------+
+4 rows in set (0.00 sec)
+
+mysql> select * from sales where quantity > 5 and total_price < 370;
++----+--------------+------------+-------------+---------------+------------+----------+
+| id | product_name | unit_price | total_price | customer_name | sale_date  | quantity |
++----+--------------+------------+-------------+---------------+------------+----------+
+|  2 | budweiser    |      60.00 |      360.00 | rohit         | 2023-07-05 |        6 |
++----+--------------+------------+-------------+---------------+------------+----------+
+1 row in set (0.01 sec)
+
+mysql> select * from sales where quantity > 5 or total_price < 370;
++----+--------------+------------+-------------+---------------+------------+----------+
+| id | product_name | unit_price | total_price | customer_name | sale_date  | quantity |
++----+--------------+------------+-------------+---------------+------------+----------+
+|  1 | nestle       |      50.00 |      250.00 | sanju         | 2023-07-03 |        5 |
+|  2 | budweiser    |      60.00 |      360.00 | rohit         | 2023-07-05 |        6 |
+|  3 | oldmonk      |      50.00 |      450.00 | jonas         | 2023-06-23 |        9 |
+|  4 | milkybar     |      15.00 |       75.00 | sanjana       | 2023-07-25 |        5 |
++----+--------------+------------+-------------+---------------+------------+----------+
+4 rows in set (0.00 sec)
+mysql> select * from sales where sale_date='2023-06-23' and total_price >300;
++----+--------------+------------+-------------+---------------+------------+----------+
+| id | product_name | unit_price | total_price | customer_name | sale_date  | quantity |
++----+--------------+------------+-------------+---------------+------------+----------+
+|  3 | oldmonk      |      50.00 |      450.00 | jonas         | 2023-06-23 |        9 |
++----+--------------+------------+-------------+---------------+------------+----------+
+1 row in set (0.00 sec)
+
+mysql> select * from sales where sale_date='2023-06-23' or total_price >300;
++----+--------------+------------+-------------+---------------+------------+----------+
+| id | product_name | unit_price | total_price | customer_name | sale_date  | quantity |
++----+--------------+------------+-------------+---------------+------------+----------+
+|  2 | budweiser    |      60.00 |      360.00 | rohit         | 2023-07-05 |        6 |
+|  3 | oldmonk      |      50.00 |      450.00 | jonas         | 2023-06-23 |        9 |
+|  5 | oats         |      75.00 |      375.00 | miles         | 2023-05-13 |        5 |
++----+--------------+------------+-------------+---------------+------------+----------+
+3 rows in set (0.00 sec)
+
+mysql> select * from sales where not total_price >300;
++----+--------------+------------+-------------+---------------+------------+----------+
+| id | product_name | unit_price | total_price | customer_name | sale_date  | quantity |
++----+--------------+------------+-------------+---------------+------------+----------+
+|  1 | nestle       |      50.00 |      250.00 | sanju         | 2023-07-03 |        5 |
+|  4 | milkybar     |      15.00 |       75.00 | sanjana       | 2023-07-25 |        5 |
++----+--------------+------------+-------------+---------------+------------+----------+
+2 rows in set (0.00 sec)
